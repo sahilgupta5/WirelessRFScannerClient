@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daspoint.wirelessrfscanner.controller"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.AppName"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.LandingPage"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.OfficialBandsPage"
+            android:label="@string/title_activity_official_bands_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.LandingPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.LandingPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.ScanSpecificationsPage"
+            android:label="@string/title_activity_scan_specifications_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.LandingPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.LandingPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.BatchScanPage"
+            android:label="@string/title_activity_batch_scan_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.LandingPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.LandingPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.MeasurementsPage"
+            android:label="@string/title_activity_measurements_page" >
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.BatchScanAddItemValuesPage"
+            android:label="@string/title_activity_scan_specifications_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.BatchScanPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.BatchScanPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.AddBatchScanItem"
+            android:label="@string/title_activity_scan_specifications_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.BatchScanPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.BatchScanPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.GraphViewPage"
+            android:label="@string/title_activity_graph_view_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.MeasurementsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.MeasurementsPage" />
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.CommandSelectionPage"
+            android:label="@string/title_activity_graph_selection_page"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.GraphViewPage" >
+        </activity>
+        <activity
+            android:name="com.daspoint.wirelessrfscanner.controller.SignalMeasurementStatisticsViewPage"
+            android:label="@string/title_activity_signal_measurement_statistics"
+            android:parentActivityName="com.daspoint.wirelessrfscanner.controller.MeasurementsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.daspoint.wirelessrfscanner.controller.MeasurementsPage" />
+        </activity>
+    </application>
+
+</manifest>
